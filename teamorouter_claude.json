@@ -1,0 +1,23 @@
+{
+  "name": "teamorouter_claude",
+  "engine": "anthropic",
+  "display_name": "TeamoRouter (Claude, Anthropic API)",
+  "description": "Claude models through TeamoRouter's Anthropic-compatible Messages endpoint.",
+  "api_key_env": "TEAMOROUTER_API_KEY",
+  "base_url": "https://api.teamorouter.com",
+  "headers": {
+    "X-Client-Source": "goose-teamorouter"
+  },
+  "models": [
+    { "name": "claude-sonnet-5-5", "context_limit": 1000000 },
+    { "name": "claude-opus-5-5", "context_limit": 1000000 },
+    { "name": "claude-haiku-5-5", "context_limit": 1000000 }
+  ],
+  "supports_streaming": true,
+  "model_doc_link": "https://teamorouter.com/models",
+  "setup_steps": [
+    "Sign in to https://teamorouter.com",
+    "Create an API key in the TeamoRouter dashboard",
+    "Copy the key and paste it above"
+  ]
+}
